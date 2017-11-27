@@ -1,14 +1,28 @@
 var p = [];
 
-let obj = {
-	print: function print(a) {
-		console.log(a);
-	}
-}
+var args = [
+	"set 2",
+	"print",
+	"frontadd 1",
+	"print",
+	"backadd 2",
+	"print",
+	"frontremove",
+	"print",
+	"set 4",
+	"print",
+	//"decrease",
+	"print",
+	"frontadd 1",
+	"print",
+	"backadd 3",
+	"print",
+	"reverse",
+	"print",
+	//"end"
+]; 
 
-obj.print(6);
-
-function calculator() {
+// function calculator() {
 	function set(n) {
 		x = n | 0;
 		// console.log(x);
@@ -50,7 +64,7 @@ function calculator() {
 		var join = reverse.join("");
 		x = join;
 	}
-}
+// }
 
 
 for (i = 0; i < args.length; i++) {
@@ -63,8 +77,8 @@ for (i = 0; i < args.length; i++) {
 		// console.log(p);
 	}
 	// window[o](p);			->> should work in browser?
-	// eval(p);
-	console.log(p);
+	eval(p);
+	// console.log(p);
 
 
 
@@ -76,30 +90,3 @@ for (i = 0; i < args.length; i++) {
 	// }
 }
 
-
-
-
-
-
-
-calculator([
-	"set 2",
-	"print",
-	"frontadd 1",
-	"print",
-	"backadd 2",
-	"print",
-	"frontremove",
-	"print",
-	"set 4",
-	"print",
-	//"decrease",
-	"print",
-	"frontadd 1",
-	"print",
-	"backadd 3",
-	"print",
-	"reverse",
-	"print",
-	//"end"
-]);
