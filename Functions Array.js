@@ -78,6 +78,7 @@ console.log(first);
 console.log(second);
 console.log(others);
 
+
 let a = 5;				
 let b = 6;				// razmenq stoinostite 
 [a, b] = [b, a];
