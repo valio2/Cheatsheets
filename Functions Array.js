@@ -83,3 +83,5 @@ let a = 5;
 let b = 6;				// razmenq stoinostite 
 [a, b] = [b, a];
 
+console.log(Array.isArray(["da", "ne"]));     // true
+console.log(!Array.isArray(["da", "ne"]));     // false

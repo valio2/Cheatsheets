@@ -73,4 +73,5 @@ for ( let command of args){
 	let tempArr = command.split(" ");
 	let [comm, o] = tempArr;
 	Commands[comm](o);
+	// Commands.comm(o);       //-> ne raboti ??
 }
