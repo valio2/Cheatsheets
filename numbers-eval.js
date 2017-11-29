@@ -60,7 +60,6 @@ function reverse() {
 	var join = reverse.join("");
 	x = join;
 }
-
 var p = [];
 for (i = 0; i < args.length; i++) {
 	var m = args[i].split(" ");
