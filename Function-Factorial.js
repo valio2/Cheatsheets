@@ -1,5 +1,3 @@
-const n = 3;
-
 const factorial = (n) => {
   if (n === 0) {
     return 1;
@@ -13,5 +11,7 @@ const z = factorial(2);
 
 const combinations = x / (y * z);
 console.log(combinations);
+console.log(factorial(11));
+
 
 

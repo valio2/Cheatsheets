@@ -2,7 +2,7 @@ let N = 7;
 if (N === 0) {
     console.log(0);
 } else if (N > 0) {
-    let bin = [1];
+    const bin = [1];
     let temp;
     temp = Math.log2(N);
     temp = Math.floor(temp);
@@ -30,7 +30,7 @@ if (N === 0) {
 }
 
 
-//------------  drugo legit reshenie  ------------//
+// ------------  drugo legit reshenie  ------------//
 
 
 // let decimalNumber = 7;
