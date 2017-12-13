@@ -1,20 +1,21 @@
-function add(a, b) {
-    if ((a | 0) == 0 && (b | 0) == 0) {
+const add = (a, b) => {
+    if (+a === 0 && +b === 0) {
         return '0';
     }
 
     a = a.split('').reverse();
     b = b.split('').reverse();
-    var result = [];
+    const result = [];
 
-    for (var i = 0; (a[i] >= 0) || (b[i] >= 0); i++) {
-        var sum = (parseInt(a[i]) || 0) + (parseInt(b[i]) || 0);
+    for (let i = 0;
+        (a[i] >= 0) || (b[i] >= 0); i++) {
+        const sum = (parseInt(a[i]) || 0) + (parseInt(b[i]) || 0);
 
         if (!result[i]) {
             result[i] = 0;
         }
 
-        var next = ((result[i] + sum) / 10) | 0;
+        const next = ((result[i] + sum) / 10) | 0;
         result[i] = (result[i] + sum) % 10;
 
         if (next) {
@@ -23,7 +24,7 @@ function add(a, b) {
     }
 
     return result.reverse().join('');
-}
+};
 
 const x = '239';
 const y = '495';

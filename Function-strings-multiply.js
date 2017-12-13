@@ -1,14 +1,14 @@
-function multiply(a, b) {
-    if ((a | 0) == 0 || (b | 0) == 0) {
+const multiply = (a, b) => {
+    if (+b === 0 || +b === 0) {
         return '0';
     }
 
     a = a.split('').reverse();
     b = b.split('').reverse();
-    var result = [];
+    const result = [];
 
-    for (var i = 0; a[i] >= 0; i++) {
-        for (var j = 0; b[j] >= 0; j++) {
+    for (let i = 0; a[i] >= 0; i += 1) {
+        for (let j = 0; b[j] >= 0; j += 1) {
             if (!result[i + j]) {
                 result[i + j] = 0;
             }
@@ -17,7 +17,7 @@ function multiply(a, b) {
         }
     }
 
-    for (var i = 0; result[i] >= 0; i++) {
+    for (let i = 0; result[i] >= 0; i += 1) {
         if (result[i] >= 10) {
             if (!result[i + 1]) {
                 result[i + 1] = 0;
@@ -29,7 +29,7 @@ function multiply(a, b) {
     }
 
     return result.reverse().join('');
-}
+};
 
 const x = '38291';
 const y = '23';
