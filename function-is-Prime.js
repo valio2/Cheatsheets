@@ -1,9 +1,9 @@
-function isPrime(n){
-	var divisor = 2;
-	var sqrtn = Math.sqrt(n);
-	while(divisor <= sqrtn) {
+const isPrime = (n) => {
+	let divisor = 2;
+	const sqrtn = Math.sqrt(n);
+	while (divisor <= sqrtn) {
 
-		if(n % divisor === 0){
+		if (n % divisor === 0) {
 			return false;
 		}
 
@@ -11,6 +11,6 @@ function isPrime(n){
 	}
 
 	return true;
-}
+};
 
 console.log(isPrime(1000000033));
