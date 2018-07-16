@@ -1,0 +1,52 @@
+// deep clone nested objects
+const originalObject = {
+    a: [1, 2, 3],
+};
+
+// first way
+const cloneObject1 = JSON.parse(JSON.stringify(originalObject));
+cloneObject1.a.push(4);
+console.log(originalObject);
+console.log(cloneObject1);
+
+console.log('separator ', '*'.repeat(20));
+
+// second way
+const cloneObject2 = deepCopy(originalObject);
+cloneObject2.a.push(4);
+console.log(originalObject);
+console.log(cloneObject2);
+
+function deepCopy(obj) {
+    let clone;
+
+    if (typeof obj === 'object') {
+
+        if (obj === null) {
+            clone = null;
+        } else {
+
+            switch (Object.prototype.toString.call(obj)) {
+                case "[object Array]":
+                    clone = obj.map(deepCopy);
+                    break;
+                case "[object Date]":
+                    clone = new Date(obj);
+                    break;
+                case "[object RegExp]":
+                    clone = new RegExp(obj);
+                    break;
+                default:
+                    clone = Object.keys(obj).reduce((prev, key) => {
+                        prev[key] = deepCopy(obj[key]);
+                        return prev;
+                    }, {});
+                    break;
+            }
+        }
+    } else {
+        clone = obj;
+    }
+
+    return clone;
+}
